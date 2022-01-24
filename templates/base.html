@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"> -->
+</head>
+
+<body>
+    <!-------- header ------->
+    <div class="motto">
+        <p>Change your thoughts and change your world.</p>
+    </div>
+    <h1>welcome to <span>whiteNews</span></h1>
+    <header>
+        <nav id="top">
+            <img src="{% static '/images/logo.jpeg' %}" alt="school logo">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></l>
+            </ul>
+        </nav>
+    </header>
+
+{% block content %}
+<!-- Content Goes here -->
+{% endblock content %}
+
+    <!-- ---footer---- -->
+    <footer>
+        <h3>Contact-us</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ea rerum. Fugiat soluta incidunt accusamus,
+            inventore ducimus a reprehenderit vitae?</p>
+        <a href="#">read more</a>
+        <p>copyright &copy; 2021</p>
+        <button><a class="go-up" href="#">Go Up</a></button>
+    </footer>
+ </body>
+ </html>

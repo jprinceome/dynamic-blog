@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./dd.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navcont">
+            <a href="index.html"><img src="./images/logo.jpeg" alt="school logo"></a>
+            <div class="navdiv" id="top">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About-us</a></li>
+                    <li><a href="contact.html">Contact-us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="#">Post</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1 class="welcome">welcome to john vard international school</h1>
+    </header>
+        <!-- contact form -->
+        <section class="contact">
+            <h1>Contact us</h1>
+            <div class="row">
+                <div class="contact-col">
+                    <h2></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odio perspiciatis omnis quaerat harum modi
+                        fugit quo, praesentium tempora maiores Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                        in repellendus molestias commodi molestiae nisi, consectetur quasi ut quas ex consequuntur delectus fugit
+                        quisquam officiis facilis eius et voluptates eligendi Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Repellendus earum placeat facere quasi beatae facilis ipsa esse, expedita totam inventore Lorem, ipsum
+                        dolor sit amet consectetur adipisicing elit. Veritatis eius, harum officia, saepe nisi corporis veniam
+                        excepturi vitae explicabo est quasi atque necessitatibus iusto libero exercitationem assumenda voluptatum
+                        molestias. Praesentium....</p>
+                </div>
+                <div class="contact-col">
+                    <h3>send us a message</h3>
+                    <form action="" method="">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="123@user.com" required>
+                        <br>
+                        <br>
+                        <label for="message">Message:</label>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+                        <br>
+                        <br>
+                        <input type="submit" name="" id="submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact us -->
+        <footer>
+            <h3>Contact-us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ea rerum. Fugiat soluta incidunt accusamus,
+                inventore ducimus a reprehenderit vitae?</p>
+            <a href="contact.html">read more</a>
+            <p>copyright &copy; 2021 john vard</p>
+            <button><a class="go-up" href="#top">click to go up</a></button>
+        </footer>
+        <!-- javascript fo toggle menu -->
+        <script>
+            var top = document.getElementById("top");
+            function showMenu() {
+                top.style.right = "0";
+            }
+            function hideMenu() {
+                top.style.left = "-200px";
+            }
+        </script>
+</body>
+<script src="./js/popper.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</html>

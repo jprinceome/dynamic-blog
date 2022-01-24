@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+    <!-- -----post ------->
+    
+    <section class="right">
+        {% for post in post_list %}
+        <div class="right-col">
+            <h3>{{ post.title }}</h3>
+            <h6>posted by {{ post.author }}</h6>
+            <h6>{{ post.created_on }}</h6>
+            <div class="para">
+                <img src="{{ post.image.url }}" alt="style guy">
+                <p>{{ post.content| slice:":200" }}</p>
+            </div>
+            <a href="{% url 'post_detail' post.slug %}"> Read more</a>
+        </div>
+        {% endfor %}
+        {% if is_paginated %}
+        <div class="next">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="next">&laquo; PREV </a>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="next"> NEXT &raquo;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </section>
+    <!-- ----- Recent post -->
+    <section class="recent">
+        <h2>Recent Post</h2>
+        <div class="recent-row">
+           <a href="#"><h3>post graduation day</h3>
+        <h6>posted by</h6></a> 
+        </div>
+        <div class="recent-row">
+            <a href="#"><h3>why most people fail in their occupation</h3>
+            <h6>posted by</h6></a>
+        </div>
+    </section>
+    
+{% endblock %}
